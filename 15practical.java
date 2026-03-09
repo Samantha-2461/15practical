@@ -4,7 +4,7 @@ import java.util.*;
 
 public class StartAnagramsprogram{
    public static void main(String args[]){
-      String filePath ="C:\\Users\\Cscience1\\Downloads\\joyce1922_ulysses.text";
+      String filePath ="C:/Users/Cscience1/Downloads/joyce1922_ulysses.text";
       Map<String, List<String>> anagrams = readWords (filePath);
       printAnagramGroups(anagrams);
    }
