@@ -14,15 +14,15 @@ public class StartAnagramsprogram{
       try (BufferedReader reader = new BufferedReader (new FileReader(path))) {
          String line;
 
-         while ((line = reader.readline()) != null){
-            String [] tokens = line.split ("\\s+");
+         while ((line = reader.readline()) != null) {
+            String [] tokens = line.split("\\s+");
             for (String word : tokens) {
-               word = CleanWord(word);
+               word = cleanWord(word);
 
                if (!word.isEmpty()) {
                   String key = generateKey(word);
 
-                  if( !map.containKey(key)) {
+                  if(!map.containKey(key)) {
                      map.put(key, new ArrayList<>());
                   }
                   map.get(key).add(word);
@@ -30,7 +30,7 @@ public class StartAnagramsprogram{
             }
          }
       } catch (IOException e) {
-         System.out.println("Error reading file");
+         System.out.println("Error reading file"++ e.getMessage() );
       }
       return map;
    }
