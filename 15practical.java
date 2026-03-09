@@ -33,4 +33,25 @@ public class StartAnagramsprogram{
             }
          }
       } catch (IOException e) {
+         System.out.println("Error reading file");
+      }
+      return map;
+   }
+   public static String cleanWord(String word){
+      word = word.replaceAll ("[^a-zA-Z]", "");
+      return word.toLowerCase();
+   }
+   public static void generateKey (String word) {
+      char [] letters = word.toCharArray();
+      Array.sort(letters);
+      return new String(letters);
+   }
+   public static void printAnagramGroups (Map<String, List<String>> map){
+      for (List<String> group : map.values ()){
+         if (group.size() >1){
+            System.out.println(group);
+         }
+      }
+   }
+}
                                                                                                                    
