@@ -4,7 +4,7 @@ import java.util.*;
 
 public class StartAnagramsprogram{
    public static void main(String args[]){
-      String filePath ="C:\Users\Cscience1\Downloads\joyce1922_ulysses.text";
+      String filePath ="C:\\Users\\Cscience1\\Downloads\\joyce1922_ulysses.text";
       Map<String, List<String>> anagrams = readWords (filePath);
       printAnagramGroups(anagrams);
    }
@@ -30,7 +30,7 @@ public class StartAnagramsprogram{
             }
          }
       } catch (IOException e) {
-         System.out.println("Error reading file"++ e.getMessage() );
+         System.out.println("Error reading file"+ e.getMessage() );
       }
       return map;
    }
@@ -38,7 +38,7 @@ public class StartAnagramsprogram{
       word = word.replaceAll ("[^a-zA-Z]", "");
       return word.toLowerCase();
    }
-   public static void generateKey (String word) {
+   public static String generateKey (String word) {
       char [] letters = word.toCharArray();
       Array.sort(letters);
       return new String(letters);
