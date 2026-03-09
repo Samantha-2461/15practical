@@ -51,4 +51,4 @@ public class StartAnagramsprogram{
       }
    }
 }
-                                                                                                                   
+// I acknowedge the use of the generative Ai ChatGPT to assist me in understanding what the practical needs me to do, helping me debug the program, Reminding me how i can implement a file reading program. And assisting me in understanding Hashmapping.                                                                                                                   
